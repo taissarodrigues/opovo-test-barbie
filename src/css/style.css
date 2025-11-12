@@ -8,8 +8,8 @@
 
 body {
     font-family: "League Spartan", sans-serif;
-    font-weight: 400;
-    color: #8c2424;
+    font-weight: 00;
+    /* color: #8c2424; */
 }
 
 a {
@@ -19,7 +19,8 @@ a {
 
 header {
     background-color: #3F2305;
-    padding-inline: 16px;
+    height: 80px;
+    padding-inline: 30px;
 }
 
 nav {
@@ -58,14 +59,14 @@ nav {
 .nav-links {
     display: flex;
     gap: 20px;
-    margin-right: 100px;
+    margin-right: 115px;
 
 }
 
 .nav-links a {
     font-family: "League Spartan", sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 27px;
     color: #F2EAD3;
     letter-spacing: 0;
@@ -124,4 +125,151 @@ nav {
         color: #ff9ecb;
     }
 
+}
+
+/* ===== SEÇÃO DE INFORMAÇÕES DO FILME ===== */
+
+.movie-info {
+    background-color: #F2EAD3;
+    color: #3F2305;
+    padding: 80px 120px;
+    padding-left: 250px;
+}
+
+.movie-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Pôster */
+.movie-poster {
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.movie-poster img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Detalhes do filme */
+.movie-details {
+    flex: 1;
+    min-width: 300px;
+    margin-top: 10px;
+}
+
+
+
+.movie-title {
+    display: inline-block;
+    font-size: 48px;
+    font-weight: 700;
+    color: #3F2305;
+    line-height: 55px;
+    letter-spacing: 0;
+    text-align: left;
+    /* margin-bottom: 32px; */
+    margin-bottom: 24px;
+}
+
+.movie-year {
+    display: inline-block;
+    font-size: 48px;
+    font-weight: 400;
+    color: #A4907C;
+    line-height: 55px;
+    letter-spacing: 0;
+    margin-left: 8px;
+}
+
+.movie-details p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 6px;
+    /* espaçamento menor entre parágrafos */
+    color: #3F2305;
+    max-width: 610px;
+    /* reduz a largura da sinopse */
+}
+
+
+.movie-details strong {
+    font-weight: 600;
+
+}
+
+/* Grade de informações */
+.movie-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 20px;
+    margin-top: 32px;
+}
+
+.movie-grid .col p {
+    margin-bottom: 24px;
+}
+
+.movie-grid .col strong {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.col {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .movie-info {
+        padding: 60px 40px;
+    }
+
+    .movie-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .movie-poster img {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .movie-details h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .movie-grid {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-info {
+        padding: 40px 24px;
+    }
+
+    .movie-details h2 {
+        font-size: 32px;
+    }
+
+    .movie-details p {
+        font-size: 16px;
+    }
 }
