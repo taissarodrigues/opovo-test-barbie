@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: #3F2305;
+    padding-inline: 16px;
+}
+
+nav {
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 120px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #F2EAD3;
+    border-radius: 3px;
+}
+
+.logo img {
+    margin-left: 120px;
+    /* move mais pra direita */
+    margin-right: 45px;
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    opacity: 1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    margin-right: 100px;
+
+}
+
+.nav-links a {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #F2EAD3;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+.nav-links a:hover {
+    color: #ff9ecb;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        padding: 0px;
+        justify-content: space-between;
+
+    }
+
+    .logo img {
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        color: #F2EAD3;
+        margin-right: 0;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background-color: #3F2305;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        min-height: 100vh;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 27px;
+        color: #F2EAD3;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: #ff9ecb;
+    }
+}
