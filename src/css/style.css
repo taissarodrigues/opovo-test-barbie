@@ -9,7 +9,7 @@
 body {
     font-family: "League Spartan", sans-serif;
     font-weight: 400;
-    color: #fff;
+    color: #8c2424;
 }
 
 a {
@@ -123,4 +123,5 @@ nav {
     .nav-links a:hover {
         color: #ff9ecb;
     }
+
 }
