@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page Barbie</title>
+
+    <!-- ===== Owl Carousel CSS ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- ===== Estilos do site ===== -->
     <link rel="stylesheet" href="src/css/style.css">
-    <script defer src="app.js"></script>
 </head>
 
 <body>
+
     <!-- ===== NAVBAR ===== -->
     <header class="header">
         <nav id="navbar">
@@ -30,7 +37,10 @@
         </nav>
     </header>
 
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
     <main id="content">
+
+        <!-- ===== SEÇÃO DO FILME ===== -->
         <section class="movie-info">
             <div class="movie-container">
 
@@ -69,7 +79,76 @@
                 </div>
             </div>
         </section>
+
+        <!-- ===== SEÇÃO DO ELENCO ===== -->
+        <section class="cast-section">
+            <h2>Elenco <span class="ver-mais">Ver mais</span></h2>
+
+            <div class="owl-carousel owl-theme">
+                <div class="cast-card">
+                    <img src="src/assets/images/cast/1.png" alt="Margot Robbie">
+                    <h3>Margot Robbie</h3>
+                    <p>Barbie</p>
+                </div>
+
+                <div class="cast-card">
+                    <img src="src/assets/images/cast/2.png" alt="Ryan Gosling">
+                    <h3>Ryan Gosling</h3>
+                    <p>Ken</p>
+                </div>
+
+                <div class="cast-card">
+                    <img src="src/assets/images/cast/3.png" alt="America Ferrera">
+                    <h3>America Ferrera</h3>
+                    <p>Gloria</p>
+                </div>
+
+                <div class="cast-card">
+                    <img src="src/assets/images/cast/4.png" alt="Kate McKinnon">
+                    <h3>Kate McKinnon</h3>
+                    <p>Barbie Estranha</p>
+                </div>
+
+                <div class="cast-card">
+                    <img src="src/assets/images/cast/5.png" alt="Ariana Greenblatt">
+                    <h3>Ariana Greenblatt</h3>
+                    <p>Sasha</p>
+                </div>
+
+                <div class="cast-card">
+                    <img src="src/assets/images/cast/6.png" alt="Michael Cera">
+                    <h3>Michael Cera</h3>
+                    <p>Allan</p>
+                </div>
+
+                <div class="cast-card">
+                    <img src="src/assets/images/cast/7.png" alt="Emma Mackey">
+                    <h3>Emma Mackey</h3>
+                    <p>Física Barbie</p>
+                </div>
+
+                <div class="cast-card">
+                    <img src="src/assets/images/cast/8.png" alt="Simu Liu">
+                    <h3>Simu Liu</h3>
+                    <p>Ken Rival</p>
+                </div>
+
+                <div class="cast-card">
+                    <img src="src/assets/images/cast/9.png" alt="Will Ferrell">
+                    <h3>Will Ferrell</h3>
+                    <p>CEO da Mattel</p>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    </main>
+
+    <!-- ===== SCRIPTS (ordem correta) ===== -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="src/js/script.js"></script>
 </body>
 
 </html>
