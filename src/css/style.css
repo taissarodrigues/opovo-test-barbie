@@ -8,8 +8,8 @@
 
 body {
     font-family: "League Spartan", sans-serif;
-    font-weight: 00;
-    /* color: #8c2424; */
+    font-weight: 400;
+    /* corrigido */
 }
 
 a {
@@ -60,30 +60,21 @@ nav {
     display: flex;
     gap: 20px;
     margin-right: 115px;
-
 }
 
 .nav-links a {
-    font-family: "League Spartan", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 27px;
     color: #F2EAD3;
-    letter-spacing: 0;
-    text-align: left;
     opacity: 1;
-
 }
 
-.nav-links a:hover {
-    color: #ff9ecb;
-}
-
+/* ========================== */
 @media (max-width: 1024px) {
     nav {
-        padding: 0px;
+        padding: 0;
         justify-content: space-between;
-
     }
 
     .logo img {
@@ -93,7 +84,6 @@ nav {
     .menu-toggle {
         display: flex;
         color: #F2EAD3;
-        margin-right: 0;
     }
 
     .nav-links {
@@ -116,7 +106,6 @@ nav {
     .nav-links a {
         font-weight: 700;
         font-size: 24px;
-        line-height: 27px;
         color: #F2EAD3;
         transition: color 0.3s ease;
     }
@@ -124,10 +113,9 @@ nav {
     .nav-links a:hover {
         color: #ff9ecb;
     }
-
 }
 
-/* ===== SEÇÃO DE INFORMAÇÕES DO FILME ===== */
+/* ===== SEÇÃO DO FILME ===== */
 
 .movie-info {
     background-color: #F2EAD3;
@@ -165,16 +153,12 @@ nav {
     margin-top: 10px;
 }
 
-
-
 .movie-title {
     display: inline-block;
     font-size: 48px;
     font-weight: 700;
     color: #3F2305;
     line-height: 55px;
-    letter-spacing: 0;
-    text-align: left;
     margin-bottom: 12px;
 }
 
@@ -184,7 +168,6 @@ nav {
     font-weight: 400;
     color: #A4907C;
     line-height: 55px;
-    letter-spacing: 0;
     margin-left: 8px;
 }
 
@@ -196,58 +179,118 @@ nav {
     max-width: 610px;
 }
 
-
 .movie-details strong {
     font-weight: 600;
-
 }
 
-/* Grade de informações */
 .movie-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 4px;
-    /* distância horizontal entre as colunas */
     row-gap: 12px;
-    /* distância vertical entre blocos */
     margin-top: 12px;
 }
 
 .movie-grid .col:nth-child(2) {
     margin-left: -60px;
-    /* move a segunda coluna mais pra esquerda */
-}
-
-.movie-grid .col {
-    flex: 1;
-    min-width: 0;
 }
 
 .movie-grid .col p {
     margin: 0;
-    /* remove qualquer espaçamento extra */
     line-height: 1.3;
-    /* reduz a altura da linha */
 }
 
 .movie-grid .col p+p {
     margin-top: 16px;
-    /* espaço entre Dirigido/Situação/Orçamento */
 }
 
 .movie-grid .col strong {
     display: block;
     font-weight: 700;
     margin-bottom: 4px;
-    /* pequeno respiro entre o título e o texto */
 }
 
-.col {
-    flex: 1;
-    min-width: 10px;
+/* ===== SEÇÃO DO ELENCO ===== */
+
+.cast-section {
+    position: relative;
+    background-color: #DFD7BF;
+    padding: 30px 0;
+    overflow: hidden;
 }
 
-/* Responsividade */
+.cast-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #3F2305;
+
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 260px;
+}
+
+.cast-section .ver-mais {
+    background: #3F2305;
+    color: #F2EAD3;
+
+    font-size: 22px;
+    line-height: 27px;
+    /* do Figma */
+    font-weight: 200;
+    /* normal */
+
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+.cast-card {
+    text-align: center;
+    padding: 5px;
+    margin-right: 2px;
+}
+
+.cast-card img {
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 14px;
+    display: block;
+    position: relative;
+    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+}
+
+.cast-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #3F2305;
+}
+
+.cast-card p {
+    font-size: 18px;
+    color: #3F2305;
+    margin-top: 4px;
+}
+
+.owl-carousel {
+    display: flex;
+    align-items: center;
+    padding-left: 220px;
+    padding-right: 155px;
+}
+
+/* Remove dots e setas */
+.owl-dots,
+.owl-nav {
+    display: none !important;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
 @media (max-width: 1024px) {
     .movie-info {
         padding: 60px 40px;
@@ -256,7 +299,6 @@ nav {
     .movie-container {
         flex-direction: column;
         align-items: center;
-        text-align: left;
         gap: 40px;
     }
 
@@ -271,7 +313,6 @@ nav {
     }
 
     .movie-grid {
-        flex-direction: column;
         gap: 24px;
     }
 }
@@ -288,4 +329,30 @@ nav {
     .movie-details p {
         font-size: 16px;
     }
+}
+
+/* ===== OWL ===== */
+
+.owl-stage {
+    display: flex;
+    gap: 0 !important;
+    margin-left: 0 !important;
+}
+
+.owl-item {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 190px !important;
+}
+
+.cast-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 160px;
+    right: 140px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(223, 215, 191, 0) 0%, #DFD7BF 100%);
+    pointer-events: none;
+    z-index: 999;
 }
