@@ -9,7 +9,6 @@
 body {
     font-family: "League Spartan", sans-serif;
     font-weight: 400;
-    /* corrigido */
 }
 
 a {
@@ -69,53 +68,6 @@ nav {
     color: #F2EAD3;
     opacity: 1;
 }
-
-/* ========================== */
-@media (max-width: 1024px) {
-    nav {
-        padding: 0;
-        justify-content: space-between;
-    }
-
-    .logo img {
-        margin-left: 0;
-    }
-
-    .menu-toggle {
-        display: flex;
-        color: #F2EAD3;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100px;
-        right: 0;
-        background-color: #3F2305;
-        flex-direction: column;
-        width: 100%;
-        padding: 20px 0;
-        text-align: center;
-        min-height: 100vh;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        font-weight: 700;
-        font-size: 24px;
-        color: #F2EAD3;
-        transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-        color: #ff9ecb;
-    }
-}
-
-/* ===== SEÇÃO DO FILME ===== */
 
 .movie-info {
     background-color: #F2EAD3;
@@ -210,8 +162,6 @@ nav {
     margin-bottom: 4px;
 }
 
-/* ===== SEÇÃO DO ELENCO ===== */
-
 .cast-section {
     position: relative;
     background-color: #DFD7BF;
@@ -224,7 +174,6 @@ nav {
     font-weight: 700;
     line-height: 40px;
     color: #3F2305;
-
     margin-bottom: 40px;
     display: flex;
     align-items: center;
@@ -232,7 +181,6 @@ nav {
     padding-left: 260px;
 }
 
-/* Estilo compartilhado para o "Ver mais" */
 .cast-section .ver-mais,
 .reviews-section .ver-mais {
     background: #3F2305;
@@ -282,55 +230,10 @@ nav {
     padding-right: 155px;
 }
 
-/* Remove dots e setas */
 .owl-dots,
 .owl-nav {
     display: none !important;
 }
-
-/* ===== RESPONSIVIDADE ===== */
-
-@media (max-width: 1024px) {
-    .movie-info {
-        padding: 60px 40px;
-    }
-
-    .movie-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .movie-poster img {
-        width: 80%;
-        max-width: 400px;
-    }
-
-    .movie-details h2 {
-        text-align: center;
-        width: 100%;
-    }
-
-    .movie-grid {
-        gap: 24px;
-    }
-}
-
-@media (max-width: 480px) {
-    .movie-info {
-        padding: 40px 24px;
-    }
-
-    .movie-details h2 {
-        font-size: 32px;
-    }
-
-    .movie-details p {
-        font-size: 16px;
-    }
-}
-
-/* ===== OWL ===== */
 
 .owl-stage {
     display: flex;
@@ -356,7 +259,6 @@ nav {
     z-index: 999;
 }
 
-/* ===== SEÇÃO DE RESENHAS===== */
 .reviews-section {
     background-color: #F2EAD3ff;
     padding: 30px 0;
@@ -384,10 +286,8 @@ nav {
     padding-bottom: 20px;
     overflow-x: auto;
     flex-wrap: nowrap;
-
     -ms-overflow-style: none;
     scrollbar-width: none;
-
 }
 
 .reviews-container::-webkit-scrollbar {
@@ -427,7 +327,6 @@ nav {
     font-size: 16px;
     margin-top: 15px;
     padding-top: 15px;
-
 }
 
 .review-footer .rating {
@@ -437,4 +336,295 @@ nav {
 .review-footer .rating strong {
     font-weight: 700;
     font-size: 18px;
+}
+
+.footer {
+    background-color: #3F2305;
+    color: #F2EAD3;
+    padding: 60px 0;
+    margin-top: -5px;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 260px;
+    padding-right: 100px;
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+}
+
+.footer-logo img {
+    width: 200px;
+    height: auto;
+    opacity: 0.8;
+}
+
+.footer-links {
+    display: flex;
+    gap: 100px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-column a {
+    color: #F2EAD3;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #DFD7BF;
+}
+
+/* ===== RESPONSIVIDADE (TABLET) ===== */
+@media (max-width: 1024px) {
+    nav {
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        margin-left: 40px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        color: #F2EAD3;
+        margin-right: 40px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: #3F2305;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        min-height: calc(100vh - 80px);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-weight: 700;
+        font-size: 24px;
+        color: #F2EAD3;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: #ff9ecb;
+    }
+
+    .movie-info {
+        padding: 60px 40px;
+    }
+
+    .movie-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .movie-poster {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .movie-poster img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .movie-details {
+        width: 100%;
+        margin-top: 0;
+        min-width: 100%;
+    }
+
+    .movie-title {
+        font-size: 40px;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .movie-year {
+        font-size: 40px;
+        line-height: 1.2;
+        margin-left: 8px;
+    }
+
+    .movie-details p {
+        max-width: none;
+    }
+
+    .movie-grid {
+        gap: 24px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cast-section h2,
+    .reviews-section h2 {
+        padding-left: 40px;
+    }
+
+    .owl-carousel {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .reviews-container {
+        flex-direction: column;
+        overflow-x: hidden;
+        gap: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .review-card {
+        width: 100%;
+    }
+
+    .cast-section::after {
+        right: 0px;
+        width: 100px;
+
+    }
+
+    .footer-links {
+        gap: 250px;
+    }
+
+    .footer-container {
+        padding-left: 40px;
+        padding-right: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+}
+
+/* ===== RESPONSIVIDADE (CELULAR) ===== */
+@media (max-width: 768px) {
+    .logo img {
+        margin-left: 20px;
+    }
+
+    .menu-toggle {
+        margin-right: 20px;
+    }
+
+    .movie-info {
+        padding: 40px 20px;
+    }
+
+    .movie-container {
+        gap: 30px;
+    }
+
+    .movie-poster {
+        width: 80%;
+    }
+
+    .movie-poster img {
+        max-width: 100%;
+        border-radius: 15px;
+    }
+
+    .movie-details {
+        min-width: 100%;
+    }
+
+    .movie-title {
+        font-size: 36px;
+        text-align: center;
+        line-height: 1.1;
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .movie-year {
+        font-size: 36px;
+        text-align: center;
+        display: inline;
+        margin-left: 8px;
+    }
+
+    .movie-details p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .movie-details strong {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .movie-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .movie-grid .col:nth-child(2) {
+        margin-left: 0;
+    }
+
+    .cast-section h2,
+    .reviews-section h2 {
+        padding-left: 20px;
+        font-size: 28px;
+    }
+
+    .owl-carousel {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .reviews-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .review-card {
+        padding: 20px;
+    }
+
+    .review-card p {
+        font-size: 16px;
+    }
+
+    .footer-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .footer-column {
+        text-align: left;
+        gap: 16px;
+    }
 }
