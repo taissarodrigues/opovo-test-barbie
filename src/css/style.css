@@ -145,7 +145,6 @@ nav {
     flex-wrap: wrap;
 }
 
-/* Pôster */
 .movie-poster {
     flex-shrink: 0;
     border-radius: 10px;
@@ -155,12 +154,11 @@ nav {
 .movie-poster img {
     display: block;
     width: 100%;
-    max-width: 400px;
+    max-width: 340px;
     height: auto;
     object-fit: cover;
 }
 
-/* Detalhes do filme */
 .movie-details {
     flex: 1;
     min-width: 300px;
@@ -177,8 +175,7 @@ nav {
     line-height: 55px;
     letter-spacing: 0;
     text-align: left;
-    /* margin-bottom: 32px; */
-    margin-bottom: 24px;
+    margin-bottom: 12px;
 }
 
 .movie-year {
@@ -195,10 +192,8 @@ nav {
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 6px;
-    /* espaçamento menor entre parágrafos */
     color: #3F2305;
     max-width: 610px;
-    /* reduz a largura da sinopse */
 }
 
 
@@ -211,24 +206,45 @@ nav {
 .movie-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 100px;
-    row-gap: 20px;
-    margin-top: 32px;
+    column-gap: 4px;
+    /* distância horizontal entre as colunas */
+    row-gap: 12px;
+    /* distância vertical entre blocos */
+    margin-top: 12px;
+}
+
+.movie-grid .col:nth-child(2) {
+    margin-left: -60px;
+    /* move a segunda coluna mais pra esquerda */
+}
+
+.movie-grid .col {
+    flex: 1;
+    min-width: 0;
 }
 
 .movie-grid .col p {
-    margin-bottom: 24px;
+    margin: 0;
+    /* remove qualquer espaçamento extra */
+    line-height: 1.3;
+    /* reduz a altura da linha */
+}
+
+.movie-grid .col p+p {
+    margin-top: 16px;
+    /* espaço entre Dirigido/Situação/Orçamento */
 }
 
 .movie-grid .col strong {
     display: block;
     font-weight: 700;
     margin-bottom: 4px;
+    /* pequeno respiro entre o título e o texto */
 }
 
 .col {
     flex: 1;
-    min-width: 250px;
+    min-width: 10px;
 }
 
 /* Responsividade */
