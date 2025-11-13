@@ -12,7 +12,7 @@ O projeto demonstra a estruturação semântica de HTML, organização de CSS (F
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 
-##  Demostração : [https://youtu.be/foYycWflAEs](https://youtu.be/6MX2uQoXamU)
+##  Demostração : https://youtu.be/d8ISdkHVxNI
 
 ## Funcionalidades
 Estrutura da Página: Header, Seção de Informações do Filme, Elenco, Resenhas e Rodapé.
@@ -45,4 +45,5 @@ Celular (max-width: 768px): Layout de coluna única para otimização mobile.
 
 * Taíssa Rodrigues — Desenvolvimento
 ]
+
 
