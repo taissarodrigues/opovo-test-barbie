@@ -31,11 +31,11 @@ Celular (max-width: 768px): Layout de coluna única para otimização mobile.
 
 ## 🛠️ Construído com
 
-* HTML5 (Estrutura semântica)
+* HTML5 
 
-* CSS3 (Estilização, Flexbox, Grid e Media Queries)
+* CSS3
 
-* JavaScript (ES6+) (Manipulação do DOM)
+* JavaScript
 
 * Owl Carousel (Biblioteca para o carrossel de elenco)
 
@@ -45,3 +45,4 @@ Celular (max-width: 768px): Layout de coluna única para otimização mobile.
 
 * Taíssa Rodrigues — Desenvolvimento
 ]
+
