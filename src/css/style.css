@@ -165,7 +165,7 @@ nav {
 .cast-section {
     position: relative;
     background-color: #DFD7BF;
-    padding: 30px 0;
+    padding: 15px 0;
     overflow: hidden;
 }
 
@@ -174,7 +174,7 @@ nav {
     font-weight: 700;
     line-height: 40px;
     color: #3F2305;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -244,7 +244,7 @@ nav {
 .owl-item {
     margin: 0 !important;
     padding: 0 !important;
-    width: 190px !important;
+    width: 165px !important;
 }
 
 .cast-section::after {
@@ -508,7 +508,8 @@ nav {
     }
 
     .footer-links {
-        gap: 250px;
+        gap: 100px;
+        flex-wrap:
     }
 
     .footer-container {
